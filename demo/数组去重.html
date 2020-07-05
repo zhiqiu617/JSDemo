@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组去重 将数组中重复出现的字符去掉，只保留一个
+        //遍历数组，用旧数组查询新数组，若新数组中没有该元素，则添加进新数组
+        function unique(arr) {
+            var newArr = [];
+            for(var i = 0; i < arr.length; i++) {
+                if(newArr.indexOf(arr[i]) === -1) {
+                    newArr.push(arr[i]);
+                }
+            }
+            return newArr;
+        }
+        var demo = unique(['blue', 'green', 'blue', 'red', 'green']);
+        console.log(demo);
+        var demo1 = unique(['a', 'd', 'c', 'd', 'f', 'f', 'e']);
+        console.log(demo1);
+    </script>
+</body>
+</html>

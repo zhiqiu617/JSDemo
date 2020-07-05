@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //查找字符串abcoeifoidsjssoog中字符o出现的位置及次数
+        //先查找出第一个o
+        //只要indexOf返回结果不是-1（查找无结果）就继续往后查找
+        //利用当前索引数继续查找下一个
+        var str = 'abcoeifoidsjssoog';
+        var count = 0;
+        var index = str.indexOf('o');
+        while(index !== -1) {
+            console.log('字符o出现位置： ' + index);
+            count++;
+            index = str.indexOf('o',index + 1);           
+            
+        }
+        console.log('字符o出现次数共 ' + count + ' 次');
+
+    </script>
+</body>
+</html>

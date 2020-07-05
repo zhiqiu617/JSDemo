@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        compute();
+        function compute() {
+            while(1){
+                var choice = prompt('欢迎使用简易计算器：\n1.加法运算\n2.减法运算\n3.乘法运算\n4.除法运算\n5.退出\n请输入您的选择：');
+                switch(choice) {
+                    case '1': 
+                        add();
+                        break;
+                    case '2':
+                        sub();
+                        break;
+                    case '3':
+                        multiply();
+                        break;
+                    case '4':
+                        devide();
+                        break;
+                    case '5':
+                        alert('您已选择退出，谢谢使用！');
+                        return;  
+                    default: 
+                        break;           
+                }
+            }
+        }
+
+        function add() {
+            var a = parseInt(prompt('请输入第一个数：'));
+            var b = parseInt(prompt('请输入第二个数：'));
+            var result = a + b;
+            prompt('结果：\n' + result);
+        }
+
+        function sub() {
+            var a = parseInt(prompt('请输入第一个数：'));
+            var b = parseInt(prompt('请输入第二个数：'));
+            var result = a - b;
+            alert('结果：\n' + result);
+        }
+
+        function multiply() {
+            var a = prompt('请输入第一个数：');
+            var b = prompt('请输入第二个数：');
+            var result = a * b;
+            alert('结果：\n' + result);
+        }
+
+        function devide() {
+            var a = prompt('请输入第一个数：');
+            var b = prompt('请输入第二个数：');
+            if(b != 0) {
+                var result = a / b;
+                alert('结果：\n' + result);
+            }else{
+                do {
+                    b = prompt('第二个数不能为0！请重新输入：');
+                }while(b == 0);
+                var result = a / b;
+                alert('结果：\n' + result);
+                
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div></div>
+    <p>
+        测试文字
+        测试文字
+        <li>123</li>
+        <li>223</li>
+    </p>
+
+    <script>
+        //innerText与innerHTML的使用与区别
+        //innerText 不识别html标签 非标准 回去出空格和换行
+        var divtest = document.querySelector('div');
+        divtest.innerText = '<strong>今天是：</strong> 2020';  //字符串原样输出
+
+        //innerHTML 识别html标签 W3C标准 保留空格和换行
+        var litest = document.querySelector('li');
+        litest.innerHTML = '<strong>2020</strong>';  //strong标签被识别，内容被加粗
+
+        //获取元素里面的内容
+        var ptest = document.querySelector('p');
+        console.log(ptest.innerText);
+        console.log(ptest.innerHTML);
+        
+        
+
+    </script>
+</body>
+</html>

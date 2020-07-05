@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //数组翻转
+        var arr1 = ['red', 'blue', 'purple', 'green'];
+        var newarr = [];
+        for(var i = arr1.length - 1; i >= 0; i--) {
+            newarr[newarr.length] = arr1[i];
+        }
+        console.log(newarr);
+
+        // 数组翻转 reverse()    
+        var arr2 = ['red', 'blue', 'purple', 'green'];    
+        arr2.reverse();
+        console.log(arr2);
+        
+        // 数组排序 sort() 运用过程中会出现不适用的情况
+        var arr3 = [1, 23, 7, 40, 16, 8];   
+        arr3.sort();
+        console.log(arr3);    // 输出[1, 16, 23, 40, 7, 8]
+
+        var arr4 = [1, 8, 7, 4, 5];
+        arr4.sort();
+        console.log(arr4);    // 输出[1, 4, 5, 7, 8]
+        
+        // 数组排序 sort()方法解决方式
+        var arr5 = [1, 23, 7, 40, 16, 8];   
+        arr5.sort(function(a, b) {
+            return a - b;  //升序排列
+            //return b - a;  //降序排列
+        });
+        console.log(arr5);
+
+        // 数组排序 冒泡排序
+        var arr6 = [1, 23, 7, 40, 16, 8];
+        for(var i = 0; i < arr6.length - 1; i++) {
+            for(var j = 0; j < arr6.length - 1; j++) {
+                if(arr6[j] > arr6[j + 1]) {
+                var temp = arr6[j];
+                arr6[j] = arr6[j + 1];
+                arr6[j + 1] = temp;
+            }
+            }
+        }
+        console.log(arr6);
+        
+        
+    </script>
+</body>
+</html>
